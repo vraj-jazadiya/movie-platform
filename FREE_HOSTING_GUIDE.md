@@ -65,7 +65,7 @@ services:
     startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
     envVars:
       - key: MONGODB_URI
-        value: mongodb+srv://ultroidxTeam:ultroidxTeam@cluster0.gabxs6m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+        value: mongodb+srv://Cluster0:Cluster0@cluster0.20j3jkn.mongodb.net/?appName=Cluster0
       - key: JWT_SECRET_KEY
         generateValue: true
       - key: OMDB_API_KEY
