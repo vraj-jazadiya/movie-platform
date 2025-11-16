@@ -5,9 +5,10 @@ class Config:
     """Application configuration"""
     
     # MongoDB Configuration
+    # Using the original working MongoDB connection
     MONGO_URI = os.getenv(
         'MONGO_URI',
-        'mongodb+srv://Cluster0:Cluster0@cluster0.20j3jkn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&tls=true&tlsAllowInvalidCertificates=true'
+        'mongodb+srv://ultroidxTeam:ultroidxTeam@cluster0.gabxs6m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
     )
     DATABASE_NAME = 'movie_platform'
     
