@@ -12,6 +12,7 @@ from routes.playlists import init_playlists_routes
 from routes.news import init_news_routes
 from routes.chat import init_chat_routes
 from routes.contact import init_contact_routes
+from routes.admin import init_admin_routes
 
 def create_app():
     """Create and configure the Flask application"""
@@ -43,6 +44,7 @@ def create_app():
     app.register_blueprint(init_news_routes(db), url_prefix='/api/news')
     app.register_blueprint(init_chat_routes(db), url_prefix='/api/chat')
     app.register_blueprint(init_contact_routes(db), url_prefix='/api/contact')
+    app.register_blueprint(init_admin_routes(db), url_prefix='/api/admin')
     
     # Health check endpoint
     @app.route('/api/health', methods=['GET'])
@@ -65,7 +67,8 @@ def create_app():
                 'playlists': '/api/playlists',
                 'news': '/api/news',
                 'chat': '/api/chat',
-                'contact': '/api/contact'
+                'contact': '/api/contact',
+                'admin': '/api/admin'
             }
         }), 200
     

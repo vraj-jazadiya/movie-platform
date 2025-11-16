@@ -101,4 +101,14 @@ export const contactAPI = {
   getAll: () => api.get('/contact/all'),
 };
 
+export const adminAPI = {
+  seedMovies: (type = 'quick') => api.post('/admin/seed-movies', { type }),
+  seedNews: () => api.post('/admin/seed-news'),
+  refreshNews: () => api.post('/admin/refresh-news'),
+  seedAll: (type = 'quick') => api.post('/admin/seed-all', { type }),
+  getDataStatus: () => api.get('/admin/data-status'),
+  clearMovies: () => api.delete('/admin/clear-movies'),
+  clearNews: () => api.delete('/admin/clear-news'),
+};
+
 export default api;
