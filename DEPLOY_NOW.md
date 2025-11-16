@@ -18,7 +18,8 @@ git commit -m "Ready for deployment"
 git branch -M main
 
 # Create a new repository on GitHub, then:
-git remote add origin https://github.com/YOUR-USERNAME/movie-platform.git
+git remote add origin https://github.com/vraj-jazadiya/movie-platform.git
+https://github.com/vraj-jazadiya/movie-platform.git
 git push -u origin main
 ```
 
@@ -35,7 +36,7 @@ git push -u origin main
    - Root Directory: `backend`
    - Environment: `Python 3`
    - Build Command: `pip install -r requirements.txt`
-   - Start Command: `gunicorn app:app --bind 0.0.0.0:$PORT`
+   - Start Command: `gunicorn app:app`
 6. **Add Environment Variables:**
    - `MONGODB_URI`: `mongodb+srv://ultroidxTeam:ultroidxTeam@cluster0.gabxs6m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
    - `JWT_SECRET_KEY`: Click "Generate"
