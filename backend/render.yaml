@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: movie-platform-api
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://ultroidxTeam:ultroidxTeam@cluster0.gabxs6m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: OMDB_API_KEY
+        value: b5e04f10
+      - key: FLASK_ENV
+        value: production
