@@ -7,12 +7,12 @@ class Config:
     # MongoDB Configuration
     MONGO_URI = os.getenv(
         'MONGO_URI',
-        'mongodb+srv://ultroidxTeam:ultroidxTeam@cluster0.gabxs6m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+        'mongodb+srv://Cluster0:Cluster0@cluster0.20j3jkn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&tls=true&tlsAllowInvalidCertificates=true'
     )
     DATABASE_NAME = 'movie_platform'
     
     # JWT Configuration
-    JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY', 'your-secret-key-change-in-production')
+    JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY', '05b0769406dfd641c66c2605bbb43e22')
     JWT_ACCESS_TOKEN_EXPIRES = timedelta(hours=24)
     JWT_REFRESH_TOKEN_EXPIRES = timedelta(days=30)
     
@@ -25,7 +25,11 @@ class Config:
     DEBUG = os.getenv('DEBUG', 'True') == 'True'
     
     # CORS Configuration
-    CORS_ORIGINS = ['http://localhost:3000', 'http://localhost:5173']
+    CORS_ORIGINS = [
+        'http://localhost:3000', 
+        'http://localhost:5173',
+        'https://movie-platform-v1.netlify.app'
+    ]
     
     # Admin Configuration
     ADMIN_USERNAME = 'admin'

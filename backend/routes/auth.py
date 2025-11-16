@@ -72,7 +72,8 @@ def init_auth_routes(db):
             
             return jsonify({
                 'user': user,
-                'tokens': tokens
+                'access_token': tokens['access_token'],
+                'refresh_token': tokens['refresh_token']
             }), 200
             
         except Exception as e:

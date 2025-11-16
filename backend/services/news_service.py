@@ -11,11 +11,11 @@ class NewsService:
         
         # Using NewsAPI.org (free tier: 100 requests/day)
         # You can get a free API key from https://newsapi.org/
-        self.newsapi_key = 'YOUR_NEWSAPI_KEY_HERE'  # Replace with actual key
+        self.newsapi_key = '854b2e8293b54de1a12a4531162bcf15'
         self.newsapi_url = 'https://newsapi.org/v2/everything'
         
         # Fallback: Use mock news if API key not available
-        self.use_mock = True  # Set to False when you have a real API key
+        self.use_mock = False  # Set to False when you have a real API key
     
     def fetch_entertainment_news(self, limit=20):
         """Fetch latest entertainment news"""
